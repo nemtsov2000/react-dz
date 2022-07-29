@@ -1,4 +1,3 @@
-// import moment from 'moment';
 import { Component } from 'react';
 import films from './MOVIES.json';
 import './styles/app.scss';
@@ -21,9 +20,9 @@ class App extends Component<{}, AppState> {
 
     saveFilm = (newfilmTitle: string, newfilmRate: number, newfilmComment: string) => {
         const newFilm: Film[] = this.state.films;
-        const newid              =  String(films.length);
+        const newId           = String(films.length);
         newFilm.push({
-            id: newid,
+            id: newId,
             title: newfilmTitle,
             rate: newfilmRate,
             comment: newfilmComment,
@@ -43,16 +42,17 @@ class App extends Component<{}, AppState> {
 
                 <main>
                     <div className={'container'}>
-
+                        <AddFilmForm
+                            saveFilm=
+                                {(newfilmTitle, newfilmRate, newfilmComment) =>
+                                    this.saveFilm(newfilmTitle, newfilmRate, newfilmComment)}
+                        />
                         <h1 className={'app__title'}>
                             Список фильмов
                         </h1>
                         <Films
                             films={this.state.films}
                             deleteNote={(index) => this.deleteNote(index)}
-                        />
-                        <AddFilmForm
-                            saveFilm={(newfilmTitle, newfilmRate, newfilmComment) => this.saveFilm(newfilmTitle, newfilmRate, newfilmComment)}
                         />
                     </div>
                 </main>
