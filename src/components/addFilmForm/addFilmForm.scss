@@ -1,0 +1,43 @@
+.add-film-form {
+  border: 2px solid blue;
+  border-radius: 5px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.film-input {
+  margin-left: 5px;
+}
+
+.form-wrapper {
+  margin: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 160px;
+}
+
+input {
+  padding: 4px;
+  border-radius: 4px;
+  margin: 0 0 0 10px;
+}
+
+textarea {
+  width: 600px;
+  height: 100px;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 0 0 20px;
+}
+
+label {
+  margin: 10px 10px
+}
+
+.input-submit {
+  width: 100px;
+  margin: 0;
+  cursor: pointer;
+}
